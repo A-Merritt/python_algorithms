@@ -67,10 +67,14 @@ def printPositiveIndex(arr):
 #12) Given an array, write a function that returns a new array where each negative value was converted to a positive value. For example, bePositive([-1,-3,-5]) returns [1, 3, 5]. 
 # A positive number in the original array should remain as positive, so that each number in the new array is all positive.
 def bePositive(arr):
-    for i in range(len(arr)):
-        if i < 0:
-            i = i*-1
-            print(i)
+    pos = []
+    for i in arr:
+        if i >= 0:
+            pos.append(i)
+        elif i < 0:
+            t = i*-1
+            pos.append(t)
+    return(pos)
 
 #13) Given an array with multiple values, write a function that replaces each value in the array with the product of the original value multiplied by itself. 
 # For example squareVal( [1, 3, 5] ) should return [1, 9, 25].
